@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Infrastructure\" />
+    <None Remove="ProgramFlows\" />
+    <None Remove="Presentations\" />
+    <None Remove="Presentations\Screens\" />
+    <None Remove="Presentations\Messages\" />
+    <None Remove="Presentations\Screens\Intro\" />
+    <None Remove="Presentations\Screens\Login\" />
+    <None Remove="Presentations\Messages\Login\" />
+    <None Remove="Presentations\Screens\Pets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infrastructure\" />
+    <Folder Include="ProgramFlows\" />
+    <Folder Include="Presentations\" />
+    <Folder Include="Presentations\Screens\" />
+    <Folder Include="Presentations\Messages\" />
+    <Folder Include="Presentations\Screens\Intro\" />
+    <Folder Include="Presentations\Screens\Login\" />
+    <Folder Include="Presentations\Messages\Login\" />
+    <Folder Include="Presentations\Screens\Pets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NewLetsPet.Domain\NewLetsPet.Domain.csproj" />
+  </ItemGroup>
+</Project>
