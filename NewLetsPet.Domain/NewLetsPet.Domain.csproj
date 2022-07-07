@@ -15,6 +15,9 @@
     <None Remove="Common\" />
     <None Remove="Common\Enums\" />
     <None Remove="Services\" />
+    <None Remove="Extensions\" />
+    <None Remove="Stock\" />
+    <None Remove="Employees\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Security\" />
@@ -24,6 +27,9 @@
     <Folder Include="Common\" />
     <Folder Include="Common\Enums\" />
     <Folder Include="Services\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Stock\" />
+    <Folder Include="Employees\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.1.0" />

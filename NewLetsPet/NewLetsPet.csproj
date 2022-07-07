@@ -20,6 +20,8 @@
     <None Remove="Presentations\Screens\Services\" />
     <None Remove="Microsoft.Extensions.DependencyInjection" />
     <None Remove="ProgramFlows\Interfaces\" />
+    <None Remove="Presentations\Screens\Stock\" />
+    <None Remove="Presentations\Screens\Employees\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Infrastructure\" />
@@ -33,6 +35,8 @@
     <Folder Include="Presentations\Screens\Pets\" />
     <Folder Include="Presentations\Screens\Services\" />
     <Folder Include="ProgramFlows\Interfaces\" />
+    <Folder Include="Presentations\Screens\Stock\" />
+    <Folder Include="Presentations\Screens\Employees\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NewLetsPet.Domain\NewLetsPet.Domain.csproj" />

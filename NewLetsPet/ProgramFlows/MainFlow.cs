@@ -16,16 +16,23 @@ namespace NewLetsPet.ProgramFlows
 	public class MainFlow : IMainFlow
     {
         private readonly IUserService _service;
+        private readonly IStockFlow _stockFlow;
+        private readonly IEmployeesFlow _employeesFlow;
 
-        public MainFlow(IUserService userService)
+        public MainFlow(
+            IUserService userService,
+            IStockFlow stockFlow,
+            IEmployeesFlow employeesFlow)
         {
             _service = userService;
+            _stockFlow = stockFlow;
+            _employeesFlow = employeesFlow;
         }
 
 		public void BeginApp()
 		{
-            Console.WriteLine("Olá Mundo!");
-            Console.WriteLine(_service.Mensagem());
+            //_stockFlow.NavigateStockMenu();
+            _employeesFlow.NavigateMenu();
         }
 	}
 }

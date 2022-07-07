@@ -16,8 +16,10 @@ namespace NewLetsPet.Repositories
 		{
 			var name = $"{typeof(T).Name}.txt";
 
-			if (!File.Exists(name))
-                File.Create(name);
+            if (!File.Exists(name))
+            {
+                using var fs = File.Create(name);
+            }
 
             var jsonStr = JsonConvert.SerializeObject(values);
 

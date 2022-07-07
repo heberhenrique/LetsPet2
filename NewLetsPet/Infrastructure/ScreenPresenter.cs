@@ -1,4 +1,6 @@
 ﻿using System;
+using NewLetsPet.Domain.Extensions;
+
 namespace NewLetsPet.Infrastructure
 {
     /// <summary>
@@ -56,6 +58,28 @@ namespace NewLetsPet.Infrastructure
                 messages = customMessage ?? "Opção Inválida";
 
             return response;
+        }
+
+        public static string GetInput(
+            string screen,
+            Predicate<string> predicate,
+            string customMessage = null)
+        {
+            string response;
+            var messages = string.Empty;
+
+            while(!predicate.Invoke(response = Show(screen, messages)))
+                messages = customMessage ?? "Opção Inválida";
+
+            return response;
+        }
+
+        public static string GetInputCamelCase<T>(
+            string screen,
+            Predicate<string> predicate,
+            string customMessage = null)
+        {
+            return GetInput(screen, predicate, customMessage).CapitalizeLettersAfterSpace();
         }
 
         private static string GetPassword()

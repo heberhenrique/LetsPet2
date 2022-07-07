@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using NewLetsPet.Domain.Employees;
 using NewLetsPet.Domain.Security;
 using NewLetsPet.ProgramFlows;
 using NewLetsPet.ProgramFlows.Interfaces;
@@ -24,8 +25,7 @@ namespace NewLetsPet
             var serviceProvider = services.BuildServiceProvider();
             var mainFlow = serviceProvider.GetService<IMainFlow>();
 
-            var userService = serviceProvider.GetService<IUserService>();
-            mainFlow.BeginApp(userService);
+            mainFlow.BeginApp();
         }
 
         public static void ConfigureServices(IServiceCollection services)
@@ -34,7 +34,12 @@ namespace NewLetsPet
                 .AddScoped<IMainFlow, MainFlow>()
                 .AddScoped<IUserRepository, UserRepository>()
                 .AddScoped<IUserService, UserService>()
-                .AddScoped<IBaseRepository<User>, BaseRepository<User>>();
+                .AddScoped<IStockFlow, StockFlow>()
+                .AddScoped<IEmployeesFlow, EmployeesFlow>()
+                .AddScoped<IEmployeeService, EmployeeService>()
+                .AddScoped<IEmployeeRepository, EmployeeRepository>()
+                .AddScoped<IBaseRepository<User>, BaseRepository<User>>()
+                .AddScoped<IBaseRepository<Employee>, BaseRepository<Employee>>();
         }
     }
 }
