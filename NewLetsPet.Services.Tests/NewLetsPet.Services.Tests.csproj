@@ -21,4 +21,7 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NewLetsPet.Services\NewLetsPet.Services.csproj" />
+  </ItemGroup>
 </Project>

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Text;
 using System.Text.Json;
+using NewLetsPet.Repositories.Interfaces.Base;
 using Newtonsoft.Json;
 
 namespace NewLetsPet.Repositories
 {
-	public class BaseRepository<T> where T : class
+	public class BaseRepository<T> : IBaseRepository<T> where T : class
 	{
 		public BaseRepository()
 		{

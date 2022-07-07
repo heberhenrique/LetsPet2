@@ -1,16 +1,19 @@
 ﻿using System;
 using NewLetsPet.Domain.Security;
+using NewLetsPet.Repositories.Interfaces;
+using NewLetsPet.Repositories.Interfaces.Base;
 
 namespace NewLetsPet.Repositories
 {
-	public class UserRepository
-	{
-		private readonly BaseRepository<User> _database;
+	public class UserRepository : IUserRepository
+    {
+		private readonly IBaseRepository<User> _database;
         public List<User> Users { get; }
 
-        public UserRepository()
+        public UserRepository(IBaseRepository<User> database)
 		{
-			_database = new();
+			_database = database;
+
             var values = _database.Get();
             if (values != null)
                 Users = values.ToList();

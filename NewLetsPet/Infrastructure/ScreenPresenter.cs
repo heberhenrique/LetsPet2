@@ -42,6 +42,22 @@ namespace NewLetsPet.Infrastructure
             return response;
         }
 
+        public static int GetOption(
+            string screen,
+            int initialMenu,
+            int endMenu,
+            string customMessage = null)
+        {
+            int response;
+            var messages = string.Empty;
+
+            while (!int.TryParse(Show(screen, messages), out response) ||
+                !(response >= initialMenu && response <= endMenu))
+                messages = customMessage ?? "Opção Inválida";
+
+            return response;
+        }
+
         private static string GetPassword()
         {
             var pass = string.Empty;

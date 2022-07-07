@@ -12,4 +12,7 @@
   <ItemGroup>
     <Folder Include="Interfaces\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NewLetsPet.Repositories\NewLetsPet.Repositories.csproj" />
+  </ItemGroup>
 </Project>

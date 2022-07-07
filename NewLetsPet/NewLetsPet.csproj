@@ -17,6 +17,9 @@
     <None Remove="Presentations\Screens\Login\" />
     <None Remove="Presentations\Messages\Login\" />
     <None Remove="Presentations\Screens\Pets\" />
+    <None Remove="Presentations\Screens\Services\" />
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
+    <None Remove="ProgramFlows\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Infrastructure\" />
@@ -28,8 +31,15 @@
     <Folder Include="Presentations\Screens\Login\" />
     <Folder Include="Presentations\Messages\Login\" />
     <Folder Include="Presentations\Screens\Pets\" />
+    <Folder Include="Presentations\Screens\Services\" />
+    <Folder Include="ProgramFlows\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NewLetsPet.Domain\NewLetsPet.Domain.csproj" />
+    <ProjectReference Include="..\NewLetsPet.Services\NewLetsPet.Services.csproj" />
+    <ProjectReference Include="..\NewLetsPet.Repositories\NewLetsPet.Repositories.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 </Project>
