@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using NewLetsPet.Domain.Employees;
+using NewLetsPet.Domain.Pets;
 using NewLetsPet.Domain.Security;
 using NewLetsPet.ProgramFlows;
 using NewLetsPet.ProgramFlows.Interfaces;
@@ -30,16 +31,21 @@ namespace NewLetsPet
 
         public static void ConfigureServices(IServiceCollection services)
         {
+            // container
             services
                 .AddScoped<IMainFlow, MainFlow>()
                 .AddScoped<IStockFlow, StockFlow>()
+                .AddScoped<IPetsFlow, PetsFlow>()
                 .AddScoped<IEmployeesFlow, EmployeesFlow>()
                 .AddScoped<IAttendanceFlow, AttendanceFlow>()
                 .AddScoped<IUserService, UserService>()
                 .AddScoped<IEmployeeService, EmployeeService>()
                 .AddScoped<IUserRepository, UserRepository>()
+                .AddScoped<IGuardianService, GuardianService>()
+                .AddScoped<IGuardianRepository, GuardianRepository>()
                 .AddScoped<IEmployeeRepository, EmployeeRepository>()
                 .AddScoped<IBaseRepository<User>, BaseRepository<User>>()
+                .AddScoped<IBaseRepository<Guardian>, BaseRepository<Guardian>>()
                 .AddScoped<IBaseRepository<Employee>, BaseRepository<Employee>>();
         }
     }
