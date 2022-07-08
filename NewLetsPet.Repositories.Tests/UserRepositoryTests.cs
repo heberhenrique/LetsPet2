@@ -11,7 +11,7 @@ namespace NewLetsPet.Repositories.Tests
         public void CreateUser()
         {
             // arrange
-            UserRepository repository = new();
+            UserRepository repository = new UserRepository(new BaseRepository<User>());
             User user = new User();
             user.Email = "heberhenrique@gmail.com";
             user.Password = "123456";

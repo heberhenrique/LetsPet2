@@ -32,11 +32,12 @@ namespace NewLetsPet
         {
             services
                 .AddScoped<IMainFlow, MainFlow>()
-                .AddScoped<IUserRepository, UserRepository>()
-                .AddScoped<IUserService, UserService>()
                 .AddScoped<IStockFlow, StockFlow>()
                 .AddScoped<IEmployeesFlow, EmployeesFlow>()
+                .AddScoped<IAttendanceFlow, AttendanceFlow>()
+                .AddScoped<IUserService, UserService>()
                 .AddScoped<IEmployeeService, EmployeeService>()
+                .AddScoped<IUserRepository, UserRepository>()
                 .AddScoped<IEmployeeRepository, EmployeeRepository>()
                 .AddScoped<IBaseRepository<User>, BaseRepository<User>>()
                 .AddScoped<IBaseRepository<Employee>, BaseRepository<Employee>>();
