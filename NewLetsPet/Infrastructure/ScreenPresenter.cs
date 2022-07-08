@@ -82,6 +82,21 @@ namespace NewLetsPet.Infrastructure
             return GetInput(screen, predicate, customMessage).CapitalizeLettersAfterSpace();
         }
 
+        public static string GetCpf(
+            string screen,
+            Predicate<string> predicate,
+            string customMessage = null)
+        {
+            string response;
+            var messages = string.Empty;
+
+            while ((response = Show(screen, messages)).ValidateCpf() &&
+                !predicate.Invoke(response))
+                messages = customMessage ?? "CPF inválido.";
+
+            return response;
+        }
+
         private static string GetPassword()
         {
             var pass = string.Empty;

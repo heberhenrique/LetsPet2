@@ -19,24 +19,28 @@ namespace NewLetsPet.ProgramFlows
         private readonly IStockFlow _stockFlow;
         private readonly IEmployeesFlow _employeesFlow;
         private readonly IAttendanceFlow _attendanceFlow;
+        private readonly IPetsFlow _petsFlow;
 
         public MainFlow(
             IUserService userService,
             IStockFlow stockFlow,
             IEmployeesFlow employeesFlow,
-            IAttendanceFlow attendanceFlow)
+            IAttendanceFlow attendanceFlow,
+            IPetsFlow petsFlow)
         {
             _service = userService;
             _stockFlow = stockFlow;
             _employeesFlow = employeesFlow;
             _attendanceFlow = attendanceFlow;
+            _petsFlow = petsFlow;
         }
 
-		public void BeginApp()
+        public void BeginApp()
 		{
             //_stockFlow.NavigateStockMenu();
             //_employeesFlow.NavigateMenu();
-            _attendanceFlow.NavigateMenu();
+            //_attendanceFlow.NavigateMenu();
+            _petsFlow.Navigate();
         }
 	}
 }
