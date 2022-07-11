@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewLetsPet.Repositories.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewLetsPet.Services.Tests", "NewLetsPet.Services.Tests\NewLetsPet.Services.Tests.csproj", "{08D39A29-DECE-4ED9-9393-2F85037C15F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewLetsPet.Api", "NewLetsPet.Api\NewLetsPet.Api.csproj", "{65A39511-522A-4AEA-BBE0-E7E946F8EA32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{08D39A29-DECE-4ED9-9393-2F85037C15F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08D39A29-DECE-4ED9-9393-2F85037C15F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08D39A29-DECE-4ED9-9393-2F85037C15F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65A39511-522A-4AEA-BBE0-E7E946F8EA32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A39511-522A-4AEA-BBE0-E7E946F8EA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A39511-522A-4AEA-BBE0-E7E946F8EA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A39511-522A-4AEA-BBE0-E7E946F8EA32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
