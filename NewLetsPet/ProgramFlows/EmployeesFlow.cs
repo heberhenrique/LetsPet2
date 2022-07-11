@@ -50,6 +50,33 @@ namespace NewLetsPet.ProgramFlows
                 ValidateEmployeeName,
                 RegisterEmployeeScreen.EmployeeNameError);
 
+            newEmployee.Cpf = ScreenPresenter.GetInput(
+                RegisterEmployeeScreen.EmployeeCPF,
+                ValidateEmployeeCpf,
+                RegisterEmployeeScreen.EmployeeCPFError);
+
+            //newEmployee.BirthDate = ScreenPresenter.GetInput(
+            //    RegisterEmployeeScreen.EmployeeBirthDate,
+            //    ValidateEmployeeBirthDate,
+            //    RegisterEmployeeScreen.EmployeeBirthDateError);
+
+            newEmployee.BankData.Bank = ScreenPresenter.GetInput(
+                RegisterEmployeeScreen.EmployeeBankCode,
+                ValidadeEmployeeBankCode,
+                RegisterEmployeeScreen.EmployeeBankCodeError);
+
+            newEmployee.BankData.Agency = ScreenPresenter.GetInput(
+                RegisterEmployeeScreen.EmployeeAgencyNumber,
+                ValidateEmployeeAgencyNumber,
+                RegisterEmployeeScreen.EmployeeAccountNumberError);
+
+            newEmployee.BankData.AccountNumber = ScreenPresenter.GetInput(
+                RegisterEmployeeScreen.EmployeeAccountNumber,
+                ValidateEmployeeAccountNumber,
+                RegisterEmployeeScreen.EmployeeAccountNumberError);
+
+
+
             _service.CreateEmployee(newEmployee);
         }
 
@@ -57,6 +84,33 @@ namespace NewLetsPet.ProgramFlows
         {
             return !string.IsNullOrWhiteSpace(name);
         }
+
+        public bool ValidateEmployeeCpf(string cpf)
+        {
+            return !string.IsNullOrWhiteSpace(cpf);
+        }
+
+        //public bool ValidateEmployeeBirthDate(string birthDate)
+        //{
+        //  var Date = DateTime.Parse(birthDate);
+        //    return true;
+        //}
+
+        public bool ValidadeEmployeeBankCode(string bankCode)
+        {
+            return !string.IsNullOrWhiteSpace(bankCode);
+        }
+
+        public bool ValidateEmployeeAgencyNumber(string agencyNumber)
+        {
+            return !string.IsNullOrWhiteSpace(agencyNumber);
+        }
+
+        public bool ValidateEmployeeAccountNumber(string accountNumber)
+        {
+            return !string.IsNullOrWhiteSpace(accountNumber);
+        }
+
     }
 }
 

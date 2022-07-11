@@ -74,6 +74,7 @@ namespace NewLetsPet.Infrastructure
             return response;
         }
 
+
         public static string GetInputCamelCase<T>(
             string screen,
             Predicate<string> predicate,
