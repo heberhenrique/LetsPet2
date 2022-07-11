@@ -1,5 +1,4 @@
-﻿using System;
-using NewLetsPet.Domain.Extensions;
+﻿using NewLetsPet.Domain.Extensions;
 
 namespace NewLetsPet.Infrastructure
 {
@@ -7,7 +6,7 @@ namespace NewLetsPet.Infrastructure
     /// Controls presentation engine.
     /// </summary>
 	public static class ScreenPresenter
-	{
+    {
         /// <summary>
         /// Show screen or message and return user input
         /// </summary>
@@ -68,7 +67,7 @@ namespace NewLetsPet.Infrastructure
             string response;
             var messages = string.Empty;
 
-            while(!predicate.Invoke(response = Show(screen, messages)))
+            while (!predicate.Invoke(response = Show(screen, messages)))
                 messages = customMessage ?? "Opção Inválida";
 
             return response;

@@ -1,23 +1,17 @@
-﻿using System;
-namespace NewLetsPet.Presentations.Screens.Employees
+﻿namespace NewLetsPet.Presentations.Screens.Employees
 {
     public static class RegisterEmployeeScreen
     {
         public const string EmployeeInputError = "Opção inválida, tente novamente.";
 
-
-
         public const string EmployeeName = "Digite o nome do funcionário: ";
         public const string EmployeeNameError = "Nome digitado está em branco";
-
 
         public const string EmployeeCPF = "Digite o CPF do funcionário: ";
         public const string EmployeeCPFError = "O CPF informado é inválido.";
 
-
         public const string EmployeeBirthDate = "Digite a data de nascimento do funcionário: ";
         public const string EmployeeBirthDateError = "Insira uma data de nascimento válida.";
-
 
         public const string EmployeeSalary = "Digite o salário do funcionário: ";
         public const string EmployeeSalaryError = "Valor do salario digitado invalido, tente novamente.";
@@ -29,7 +23,7 @@ namespace NewLetsPet.Presentations.Screens.Employees
         public const string EmployeeContactStreetError = "O nome da Rua/Avenia é inválido.";
 
         public const string EmployeeContactStreetNumber = "Informe o número: ";
-        public const string EmployeeContactStreetNumber = "O numero informado é inválido.";
+        public const string EmployeeContactStreetNumberError = "O numero informado é inválido.";
 
         public const string EmployeeContactDistrict = "Informe o nome do bairro:";
         public const string EmployeeContactDistrictError = "O nome do bairro é inválido.";
@@ -54,9 +48,7 @@ namespace NewLetsPet.Presentations.Screens.Employees
         public const string EmployeeContactPhoneError = @"Telefone digitado inválido!
 Digite no formato (12)1234-1234";
 
-        public const string EmployeeContactAdInfoExist = "Alguma informação adicional?";
-        public const string EmployeeContactAdInfo = "Descreva a observação: ";
-        public const string EmployeeContactAdInfoError = "O campo de observação está em branco.";
+        public const string EmployeeContactAddInfo = "Complemento (caso não exista, deixe em branco): ";
 
 
         #endregion
@@ -88,6 +80,7 @@ Digite o tipo da chave pix que deseja usar:
         public const string EmployeePixEmail = "Digite o email da chave pix: ";
         public const string EmployeePixPhone = "Digite o número de celular da chave pix: ";
         public const string EmployeePixRandom = "Digite a chave pix aleatória: ";
+        public const string EmployeePixRandomError = "Chave pix aleatória inválida: ";
 
         #endregion
 
@@ -126,7 +119,7 @@ O funcionário consegue lidar com animais que precisam de necessidades especiais
 
 
         public const string EmployeeServiceAgressive = @"
-O funcionário consegue lidar com animais agressigos?
+O funcionário consegue lidar com animais agressivos?
 1. Sim
 2. Não";
 
